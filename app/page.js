@@ -16,9 +16,12 @@ export default function Home() {
           <span style={styles.pill}>Profile</span>
         </div>
       </header>
+<section style={isSmall ? styles.shellMobile : styles.shell}>
+  <aside style={isSmall ? styles.leftMobile : styles.left}>...
+  
+</section>
 
-      <section style={styles.shell}>
-        <aside style={styles.left}>
+      
           <div style={styles.card}>
             <div style={styles.cardTitle}>Categories</div>
             <button style={styles.navBtn}>🏈 Sports</button>
@@ -26,7 +29,7 @@ export default function Home() {
             <button style={styles.navBtn}>🛍️ Marketplace</button>
             <button style={styles.navBtn}>📺 Live</button>
           </div>
-
+<section style={isSmall ? styles.centerMobile : styles.center}>...
           <div style={styles.card}>
             <div style={styles.cardTitle}>Trending</div>
             <div style={styles.small}>#NFL</div>
@@ -36,7 +39,7 @@ export default function Home() {
           </div>
         </aside>
 
-        <section style={styles.center}>
+      
           <div style={styles.compose}>
             <div style={styles.composeTop}>
               <div style={styles.avatar}>CN</div>
@@ -84,7 +87,7 @@ export default function Home() {
           </div>
         </section>
 
-        <aside style={styles.right}>
+       <aside style={isSmall ? styles.rightMobile : styles.right}>...
           <div style={styles.card}>
             <div style={styles.cardTitle}>LIVE</div>
             <div style={styles.liveBox}>
