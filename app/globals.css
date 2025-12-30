@@ -55,4 +55,13 @@ html, body {
 #__next {
   min-height: 100vh;
   height: auto;
+}html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
+
+* {
+  box-sizing: border-box;
+}
+
