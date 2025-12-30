@@ -1,15 +1,11 @@
 export default function Home() {
- const isSmall =
-  typeof window !== "undefined" && window.innerWidth < 900;
- return (
+  return (
     <main style={styles.page}>
       <header style={styles.header}>
         <div style={styles.brand}>
           <span style={styles.dot} />
           <span style={styles.title}>Crowd Noise</span>
         </div>
-overflowX: "hidden",
-maxWidth: "100vw",
 
         <div style={styles.headerRight}>
           <span style={styles.pill}>Feed</span>
@@ -18,44 +14,17 @@ maxWidth: "100vw",
           <span style={styles.pill}>Profile</span>
         </div>
       </header>
-<section style={isSmall ? styles.shellMobile : styles.shell}>
-  <aside style={isSmall ? styles.leftMobile : styles.left}>...
-  
-</section>
 
-      
+      <section style={styles.shell}>
+        <aside style={styles.left}>
           <div style={styles.card}>
             <div style={styles.cardTitle}>Categories</div>
             <button style={styles.navBtn}>🏈 Sports</button>
             <button style={styles.navBtn}>🎵 Music</button>
             <button style={styles.navBtn}>🛍️ Marketplace</button>
             <button style={styles.navBtn}>📺 Live</button>
-          </div>shellMobile: {
-  display: "flex",
-  flexDirection: "column",
-  gap: 16,
-  width: "100%",
-  maxWidth: "100%",
-  padding: 12,
-  boxSizing: "border-box",
-},
+          </div>
 
-leftMobile: {
-  width: "100%",
-  maxWidth: "100%",
-},
-
-centerMobile: {
-  width: "100%",
-  maxWidth: "100%",
-},
-
-rightMobile: {
-  width: "100%",
-  maxWidth: "100%",
-},
-
-<section style={isSmall ? styles.centerMobile : styles.center}>...
           <div style={styles.card}>
             <div style={styles.cardTitle}>Trending</div>
             <div style={styles.small}>#NFL</div>
@@ -65,14 +34,11 @@ rightMobile: {
           </div>
         </aside>
 
-      
+        <section style={styles.center}>
           <div style={styles.compose}>
             <div style={styles.composeTop}>
               <div style={styles.avatar}>CN</div>
-              <input
-                style={styles.input}
-                placeholder="Post a rant, a take, or drop a link…"
-              />
+              <input style={styles.input} placeholder="Post a rant, a take, or drop a link…" />
             </div>
             <div style={styles.composeBottom}>
               <div style={styles.actions}>
@@ -113,7 +79,7 @@ rightMobile: {
           </div>
         </section>
 
-       <aside style={isSmall ? styles.rightMobile : styles.right}>...
+        <aside style={styles.right}>
           <div style={styles.card}>
             <div style={styles.cardTitle}>LIVE</div>
             <div style={styles.liveBox}>
@@ -182,7 +148,10 @@ const styles = {
     color: "white",
     fontFamily:
       'system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif',
+    overflowX: "hidden",      // ✅ key for mobile
+    maxWidth: "100vw",        // ✅ key for mobile
   },
+
   header: {
     height: 64,
     display: "flex",
@@ -196,6 +165,7 @@ const styles = {
     backdropFilter: "blur(10px)",
     zIndex: 10,
   },
+
   brand: { display: "flex", alignItems: "center", gap: 10 },
   dot: {
     width: 10,
@@ -205,6 +175,7 @@ const styles = {
     boxShadow: "0 0 0 3px rgba(255,45,45,0.18)",
   },
   title: { fontWeight: 800, letterSpacing: 0.4 },
+
   headerRight: { display: "flex", gap: 8, flexWrap: "wrap" },
   pill: {
     padding: "8px 10px",
@@ -214,71 +185,46 @@ const styles = {
     fontSize: 12,
     fontWeight: 700,
   },
+
+  // ✅ This is the real fix: flexWrap + flexible columns
   shell: {
-  ,const isMobile =
-  typeof window !== "undefined" && window.innerWidth < 900;
-
- = {
-  const isMobile =
-  typeof window !== "undefined" && window.innerWidth < 900;
-
-const styles = {
-shell: {
-  display: "flex",
-  flexWrap: "wrap",
-  gap: 24,
-  width: "100%",
-  maxWidth: 1400,
-  margin: "0 auto",
-  padding: 12,
-  boxSizing: "border-box",
-},
-
-  },
-left: {
-  flex: "1 1 260px",
-  maxWidth: "100%",
-  boxSizing: "border-box",
-},
-
-center: {
-  flex: "2 1 520px",
-  minWidth: 0,
-  maxWidth: "100%",
-  boxSizing: "border-box",
-},
-
-right: {
-  flex: "1 1 320px",
-  maxWidth: "100%",
-  boxSizing: "border-box",
-},
-
-
-  },
-};
-
+    display: "flex",
+    flexWrap: "wrap",
+    gap: 24,
+    width: "100%",
+    maxWidth: 1400,
+    margin: "0 auto",
+    padding: 12,
+    boxSizing: "border-box",
   },
 
   left: {
-    width: isMobile ? "100%" : "260px",
+    flex: "1 1 260px",
+    minWidth: 0,
+    boxSizing: "border-box",
+    display: "flex",
+    flexDirection: "column",
+    gap: 16,
   },
 
   center: {
-    width: "100%",
-    flex: isMobile ? "none" : 1,
+    flex: "2 1 520px",
+    minWidth: 0,              // ✅ prevents overflow on phones
+    boxSizing: "border-box",
+    display: "flex",
+    flexDirection: "column",
+    gap: 16,
   },
 
   right: {
-    width: isMobile ? "100%" : "320px",
-  },
-};
-
+    flex: "1 1 320px",
+    minWidth: 0,
+    boxSizing: "border-box",
+    display: "flex",
+    flexDirection: "column",
     gap: 16,
   },
-  left: { display: "flex", flexDirection: "column", gap: 16 },
-  center: { display: "flex", flexDirection: "column", gap: 16 },
-  right: { display: "flex", flexDirection: "column", gap: 16 },
+
   card: {
     border: "1px solid rgba(135, 196, 255, 0.22)",
     background: "rgba(9, 25, 48, 0.35)",
@@ -287,6 +233,7 @@ right: {
     boxShadow: "0 10px 30px rgba(0,0,0,0.25)",
   },
   cardTitle: { fontWeight: 800, marginBottom: 10, letterSpacing: 0.2 },
+
   navBtn: {
     width: "100%",
     textAlign: "left",
@@ -299,7 +246,9 @@ right: {
     marginBottom: 8,
     fontWeight: 700,
   },
+
   small: { opacity: 0.85, fontSize: 13, marginBottom: 6 },
+
   compose: {
     border: "1px solid rgba(135, 196, 255, 0.25)",
     background: "rgba(9, 25, 48, 0.35)",
@@ -307,7 +256,9 @@ right: {
     padding: 14,
     boxShadow: "0 10px 30px rgba(0,0,0,0.25)",
   },
+
   composeTop: { display: "flex", gap: 10, alignItems: "center" },
+
   avatar: {
     width: 42,
     height: 42,
@@ -318,6 +269,7 @@ right: {
     background: "rgba(255,45,45,0.18)",
     border: "1px solid rgba(255,45,45,0.35)",
   },
+
   input: {
     flex: 1,
     height: 42,
@@ -328,15 +280,20 @@ right: {
     padding: "0 12px",
     outline: "none",
     fontSize: 14,
+    minWidth: 0, // ✅ prevents overflow in flex row
   },
+
   composeBottom: {
     marginTop: 12,
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
     gap: 10,
+    flexWrap: "wrap", // ✅
   },
+
   actions: { display: "flex", gap: 8, flexWrap: "wrap" },
+
   actionBtn: {
     padding: "8px 10px",
     borderRadius: 999,
@@ -347,6 +304,7 @@ right: {
     fontWeight: 700,
     fontSize: 12,
   },
+
   postBtn: {
     padding: "10px 14px",
     borderRadius: 14,
@@ -355,8 +313,11 @@ right: {
     color: "white",
     fontWeight: 900,
     cursor: "pointer",
+    whiteSpace: "nowrap",
   },
+
   feed: { display: "flex", flexDirection: "column", gap: 12 },
+
   post: {
     display: "flex",
     gap: 10,
@@ -365,8 +326,11 @@ right: {
     border: "1px solid rgba(135, 196, 255, 0.22)",
     background: "rgba(9, 25, 48, 0.35)",
     boxShadow: "0 10px 30px rgba(0,0,0,0.25)",
+    minWidth: 0, // ✅
   },
+
   postLeft: { paddingTop: 2 },
+
   avatarSm: {
     width: 36,
     height: 36,
@@ -377,10 +341,15 @@ right: {
     background: "rgba(135, 196, 255, 0.14)",
     border: "1px solid rgba(135, 196, 255, 0.24)",
   },
-  postBody: { flex: 1 },
+
+  postBody: { flex: 1, minWidth: 0 },
+
   postTop: { display: "flex", justifyContent: "space-between", gap: 10 },
+
   postUser: { display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" },
+
   user: { fontWeight: 900 },
+
   tag: {
     fontSize: 12,
     fontWeight: 800,
@@ -390,9 +359,13 @@ right: {
     background: "rgba(0,0,0,0.15)",
     opacity: 0.95,
   },
+
   time: { fontSize: 12, opacity: 0.8, fontWeight: 700 },
+
   postText: { marginTop: 8, lineHeight: 1.35, opacity: 0.95 },
-  postBottom: { marginTop: 10, display: "flex", gap: 8 },
+
+  postBottom: { marginTop: 10, display: "flex", gap: 8, flexWrap: "wrap" },
+
   reaction: {
     width: 40,
     height: 34,
@@ -403,13 +376,16 @@ right: {
     cursor: "pointer",
     fontWeight: 900,
   },
+
   liveBox: {
     borderRadius: 14,
     border: "1px solid rgba(255,45,45,0.28)",
     background: "rgba(0,0,0,0.15)",
     padding: 12,
   },
+
   liveTop: { display: "flex", alignItems: "center", gap: 8, marginBottom: 8 },
+
   liveDot: {
     width: 10,
     height: 10,
@@ -417,8 +393,11 @@ right: {
     background: "#ff2d2d",
     boxShadow: "0 0 0 3px rgba(255,45,45,0.18)",
   },
+
   liveText: { fontWeight: 900, letterSpacing: 0.3 },
+
   liveTitle: { fontWeight: 900, marginBottom: 6 },
+
   joinBtn: {
     width: "100%",
     marginTop: 10,
@@ -430,6 +409,7 @@ right: {
     fontWeight: 900,
     cursor: "pointer",
   },
+
   item: {
     padding: "10px 10px",
     borderRadius: 14,
@@ -437,7 +417,9 @@ right: {
     background: "rgba(0,0,0,0.15)",
     marginBottom: 10,
   },
+
   itemTitle: { fontWeight: 900, marginBottom: 4 },
+
   shopBtn: {
     width: "100%",
     padding: "10px 12px",
