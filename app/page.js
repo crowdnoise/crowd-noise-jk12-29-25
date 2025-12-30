@@ -184,11 +184,34 @@ const styles = {
     fontWeight: 700,
   },
   shell: {
-    maxWidth: 1200,
+  ,const isMobile =
+  typeof window !== "undefined" && window.innerWidth < 900;
+
+const styles = {
+  shell: {
+    display: "flex",
+    flexDirection: isMobile ? "column" : "row",
+    gap: "24px",
+    width: "100%",
+    maxWidth: "1400px",
     margin: "0 auto",
-    padding: 18,
-    display: "grid",
-    gridTemplateColumns: "260px 1fr 320px",
+    padding: isMobile ? "12px" : "0",
+  },
+
+  left: {
+    width: isMobile ? "100%" : "260px",
+  },
+
+  center: {
+    width: "100%",
+    flex: isMobile ? "none" : 1,
+  },
+
+  right: {
+    width: isMobile ? "100%" : "320px",
+  },
+};
+
     gap: 16,
   },
   left: { display: "flex", flexDirection: "column", gap: 16 },
