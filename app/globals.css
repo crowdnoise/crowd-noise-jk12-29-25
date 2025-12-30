@@ -71,5 +71,34 @@ html, body {
 }
 * {
   box-sizing: border-box;
+/* MOBILE FIX */
+@media (max-width: 900px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Force vertical layout */
+  .shell {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  /* Make all columns full width */
+  .left,
+  .center,
+  .right {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Header buttons wrap instead of overflow */
+  header {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+}
+
 }
 
