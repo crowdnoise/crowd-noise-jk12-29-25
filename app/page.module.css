@@ -151,7 +151,12 @@ a.secondary {
 .main {
   width: 100%;
   max-width: 100%;
+}@media (max-width: 768px) {
+  .main {
+    padding: 72px 14px;  /* phone-friendly */
+  }
 }
+
 
 }
 
