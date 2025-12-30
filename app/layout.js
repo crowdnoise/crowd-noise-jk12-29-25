@@ -1,3 +1,6 @@
+export const metadata = {
+  viewport: "width=device-width, initial-scale=1",
+};
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
