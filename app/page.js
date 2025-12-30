@@ -28,7 +28,31 @@ export default function Home() {
             <button style={styles.navBtn}>🎵 Music</button>
             <button style={styles.navBtn}>🛍️ Marketplace</button>
             <button style={styles.navBtn}>📺 Live</button>
-          </div>
+          </div>shellMobile: {
+  display: "flex",
+  flexDirection: "column",
+  gap: 16,
+  width: "100%",
+  maxWidth: "100%",
+  padding: 12,
+  boxSizing: "border-box",
+},
+
+leftMobile: {
+  width: "100%",
+  maxWidth: "100%",
+},
+
+centerMobile: {
+  width: "100%",
+  maxWidth: "100%",
+},
+
+rightMobile: {
+  width: "100%",
+  maxWidth: "100%",
+},
+
 <section style={isSmall ? styles.centerMobile : styles.center}>...
           <div style={styles.card}>
             <div style={styles.cardTitle}>Trending</div>
