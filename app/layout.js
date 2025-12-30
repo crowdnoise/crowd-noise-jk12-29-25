@@ -3,6 +3,10 @@ export const metadata = {
 };
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
