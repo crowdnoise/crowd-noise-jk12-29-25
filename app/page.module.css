@@ -1,3 +1,5 @@
+html, body { width: 100%; overflow-x: hidden; }
+* { box-sizing: border-box; }
 .page{
   min-height:100vh;
   color:#fff;
@@ -39,7 +41,11 @@
 
 /* Layout */
 .shell{
-  display:flex;
+ @media (max-width: 900px){
+  .shell { flex-direction: column; }
+  .left, .center, .right { width: 100% !important; }
+}
+ display:flex;
   gap:24px;
   width:100%;
   max-width:1400px;
