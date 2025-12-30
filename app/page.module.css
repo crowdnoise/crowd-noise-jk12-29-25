@@ -155,7 +155,25 @@ a.secondary {
   .main {
     padding: 72px 14px;  /* phone-friendly */
   }
+}@media (max-width: 900px) {
+  /* Make common layout containers stack on mobile */
+  .layout, .container, .shell, .columns, .content, .grid, .row {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* If your main layout is flex */
+  .layout, .columns, .row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  /* If your main layout is grid */
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
 }
+
 
 
 }
