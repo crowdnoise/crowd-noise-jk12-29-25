@@ -187,6 +187,10 @@ const styles = {
   ,const isMobile =
   typeof window !== "undefined" && window.innerWidth < 900;
 
+ = {
+  const isMobile =
+  typeof window !== "undefined" && window.innerWidth < 900;
+
 const styles = {
   shell: {
     display: "flex",
@@ -196,6 +200,22 @@ const styles = {
     maxWidth: "1400px",
     margin: "0 auto",
     padding: isMobile ? "12px" : "0",
+  },
+
+  left: {
+    width: isMobile ? "100%" : "260px",
+  },
+
+  center: {
+    width: "100%",
+    flex: isMobile ? "none" : 1,
+  },
+
+  right: {
+    width: isMobile ? "100%" : "320px",
+  },
+};
+
   },
 
   left: {
