@@ -204,18 +204,26 @@ shell: {
 },
 
   },
+left: {
+  flex: "1 1 260px",
+  maxWidth: "100%",
+  boxSizing: "border-box",
+},
 
-  left: {
-    width: isMobile ? "100%" : "260px",
-  },
+center: {
+  flex: "2 1 520px",
+  minWidth: 0,
+  maxWidth: "100%",
+  boxSizing: "border-box",
+},
 
-  center: {
-    width: "100%",
-    flex: isMobile ? "none" : 1,
-  },
+right: {
+  flex: "1 1 320px",
+  maxWidth: "100%",
+  boxSizing: "border-box",
+},
 
-  right: {
-    width: isMobile ? "100%" : "320px",
+
   },
 };
 
