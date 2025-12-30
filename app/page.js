@@ -192,14 +192,17 @@ const styles = {
   typeof window !== "undefined" && window.innerWidth < 900;
 
 const styles = {
-  shell: {
-    display: "flex",
-    flexDirection: isMobile ? "column" : "row",
-    gap: "24px",
-    width: "100%",
-    maxWidth: "1400px",
-    margin: "0 auto",
-    padding: isMobile ? "12px" : "0",
+shell: {
+  display: "flex",
+  flexWrap: "wrap",
+  gap: 24,
+  width: "100%",
+  maxWidth: 1400,
+  margin: "0 auto",
+  padding: 12,
+  boxSizing: "border-box",
+},
+
   },
 
   left: {
