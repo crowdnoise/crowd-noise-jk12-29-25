@@ -1,5 +1,7 @@
 export default function Home() {
-  return (
+ const isSmall =
+  typeof window !== "undefined" && window.innerWidth < 900;
+ return (
     <main style={styles.page}>
       <header style={styles.header}>
         <div style={styles.brand}>
