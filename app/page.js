@@ -8,6 +8,8 @@ export default function Home() {
           <span style={styles.dot} />
           <span style={styles.title}>Crowd Noise</span>
         </div>
+overflowX: "hidden",
+maxWidth: "100vw",
 
         <div style={styles.headerRight}>
           <span style={styles.pill}>Feed</span>
