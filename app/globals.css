@@ -1,3 +1,16 @@
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+#__next {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 html, body {
   width: 100%;
   overflow-x: hidden;
@@ -52,12 +65,7 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-}
 
-#__next {
-  max-width: 100%;
-  overflow-x: hidden;
-}
 
   width: 100%;
   max-width: 100%;
