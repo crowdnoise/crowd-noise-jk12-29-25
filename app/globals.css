@@ -111,5 +111,10 @@ html, body {
   .shell { flex-direction: column; }
   .left, .center, .right { width: 100%; max-width: 100%; }
 }
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+* { box-sizing: border-box; }
 
 
