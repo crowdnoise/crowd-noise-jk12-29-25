@@ -47,21 +47,18 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
-  }
-}
-html, body {
-  width: 100%;
+html,
+body {
   max-width: 100%;
-  overflow-x: auto;  /* TEMP so we can see what's overflowing */
-}
-
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
 
 #__next {
-  min-height: 100vh;
-  height: auto;
-}html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
