@@ -218,26 +218,28 @@ html, body { width: 100%; overflow-x: hidden; }
   font-weight:900;
   cursor:pointer;
 
-  }/* ✅ Mobile breakpoint: stacks into 1 column + prevents sideways overflow */
+  /* MOBILE FIX — FORCE TRUE SINGLE COLUMN */
 @media (max-width: 900px) {
   .shell {
     display: flex;
     flex-direction: column;
-    gap: 16px;
     width: 100%;
     max-width: 100%;
-    min-width: 0;
-    padding: 12px;
-    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   .left,
-  .center,
-  .right {
+  .center {
     width: 100%;
     max-width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
+  }
+
+  /* THIS IS THE KEY LINE */
+  .right {
+    display: none;
+  }
+}
+
   }/* 🔒 HARD mobile lock — prevents sideways overflow */
 @media (max-width: 900px) {
 
