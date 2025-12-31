@@ -220,89 +220,62 @@ html, body { width: 100%; overflow-x: hidden; }
 
   /* MOBILE FIX — FORCE TRUE SINGLE COLUMN */
 @media (max-width: 900px) {
+  /* stop ANY sideways overflow */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .page {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  /* main 3-column wrapper */
   .shell {
     display: flex;
-    flex-direction: column;
+    flex-direction: column !important;
+    gap: 16px;
     width: 100%;
-    max-width: 100%;
+    max-width: 100vw;
+    padding: 12px;
+    box-sizing: border-box;
     overflow-x: hidden;
   }
 
-  .left,
-  .center {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  /* THIS IS THE KEY LINE */
-  .right {
-    display: none;
-  }
-}
-
-  }/* 🔒 HARD mobile lock — prevents sideways overflow */
-@media (max-width: 900px) {
-
-  body {
-    overflow-x: hidden;
-  }
-
-  .shell {
-    flex-direction: column;
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
+  /* force each column to be full width */
   .left,
   .center,
   .right {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
-
-  /* 🔥 THIS IS THE BIG ONE */
-  .right {
-    display: none;
-  }
-
-  .headerRight {
-    max-width: 100%;
-    overflow-x: auto;
-  }
-
-}
-
-}@media (max-width: 900px) {
-  /* Force page to never exceed screen width */
-  .page, .page * {
-    max-width: 100vw;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
     box-sizing: border-box;
   }
 
-  /* Hide the third column no matter what */
+  /* hide right column completely on mobile */
   .right {
     display: none !important;
   }
 
-  /* Make shell truly single column */
-  .shell {
-    flex-direction: column !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: hidden !important;
+  /* IMPORTANT: allow inner cards/sections to shrink */
+  .card,
+  .compose,
+  .post {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
-  /* Ensure main columns stretch full width */
-  .left, .center {
-    width: 100% !important;
-    max-width: 100% !important;
+  /* inputs/buttons can cause overflow */
+  input,
+  button {
+    max-width: 100%;
   }
-}
 
-
-}
-
-
+  /* images/videos (future) */
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
 }
