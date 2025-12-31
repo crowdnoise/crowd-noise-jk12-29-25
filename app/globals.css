@@ -77,7 +77,7 @@ html, body {
 * {
   box-sizing: border-box;
 /* MOBILE FIX */
-@media (max-width: 900px) {
+ {
 
   body {
     overflow-x: hidden;
@@ -107,5 +107,5 @@ html, body {
 
 }html, body { width: 100%; overflow-x: hidden; }
 * { box-sizing: border-box; }
-
+@media (max-width: 900px) {
 
