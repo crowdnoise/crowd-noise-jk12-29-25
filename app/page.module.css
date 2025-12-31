@@ -238,7 +238,40 @@ html, body { width: 100%; overflow-x: hidden; }
     max-width: 100%;
     min-width: 0;
     box-sizing: border-box;
+  }/* 🔒 HARD mobile lock — prevents sideways overflow */
+@media (max-width: 900px) {
+
+  body {
+    overflow-x: hidden;
   }
+
+  .shell {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .left,
+  .center,
+  .right {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  /* 🔥 THIS IS THE BIG ONE */
+  .right {
+    display: none;
+  }
+
+  .headerRight {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+}
+
 }
 
 }
