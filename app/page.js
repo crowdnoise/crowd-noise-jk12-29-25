@@ -20,6 +20,7 @@ export default function Home() {
           <span className={styles.pill}>Profile</span>
         </div>
       </header>
+<div className={styles.debugMobile}>✅ MOBILE CSS UPDATED</div>
 
       <section className={styles.shell}>
         <aside className={styles.left}>
