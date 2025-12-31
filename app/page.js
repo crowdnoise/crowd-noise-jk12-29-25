@@ -65,7 +65,8 @@ export default function Home() {
           </div>
         </section>
 
-        <aside className={styles.right}>
+        <aside className={styles.right} style={{ display: "none" }}>
+
           <div className={styles.card}>
             <div className={styles.cardTitle}>LIVE</div>
             <div className={styles.liveBox}>
