@@ -1,3 +1,7 @@
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 import styles from "./page.module.css";
 
 export default function Home() {
