@@ -214,14 +214,18 @@ html, body { width: 100%; overflow-x: hidden; }
   color:#fff;
   font-weight:900;
   cursor:pointer;
-}
-/* ✅ Mobile breakpoint: stacks into 1 column + prevents sideways overflow */
+
+  }/* ✅ Mobile breakpoint: stacks into 1 column + prevents sideways overflow */
 @media (max-width: 900px) {
   .shell {
+    display: flex;
     flex-direction: column;
+    gap: 16px;
     width: 100%;
     max-width: 100%;
+    min-width: 0;
     padding: 12px;
+    box-sizing: border-box;
   }
 
   .left,
@@ -230,7 +234,10 @@ html, body { width: 100%; overflow-x: hidden; }
     width: 100%;
     max-width: 100%;
     min-width: 0;
+    box-sizing: border-box;
   }
+}
+
 }
 
 
