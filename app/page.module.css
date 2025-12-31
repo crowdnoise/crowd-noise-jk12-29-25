@@ -215,9 +215,23 @@ html, body { width: 100%; overflow-x: hidden; }
   font-weight:900;
   cursor:pointer;
 }
+/* ✅ Mobile breakpoint: stacks into 1 column + prevents sideways overflow */
+@media (max-width: 900px) {
+  .shell {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+  }
 
-/* ✅ Mobile breakpoint: stacks into 1 column */
-@media (max-width: 900px){
-  .shell{flex-direction:column;}
-  .left,.right{width:100%;}
+  .left,
+  .center,
+  .right {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
+
 }
