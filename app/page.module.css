@@ -1,7 +1,9 @@
-/* DEBUG-777 */
-overflow-x: hidden;
-width: 100%;
-max-width: 100vw;
+.page {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 html, body { width: 100%; overflow-x: hidden; }
 * { box-sizing: border-box; }
 .page{
