@@ -2,9 +2,15 @@
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+.page {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
-html, body { width: 100%; overflow-x: hidden; }
+
+
 * { box-sizing: border-box; }
 .page{
   min-height:100vh;
