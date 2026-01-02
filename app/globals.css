@@ -1,11 +1,10 @@
-/* GLOBAL RESET */
+/* Global reset */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* BASE DOCUMENT */
 html,
 body {
   margin: 0;
@@ -13,10 +12,8 @@ body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
 }
 
-/* NEXT ROOT */
 #__next {
   width: 100%;
   max-width: 100%;
