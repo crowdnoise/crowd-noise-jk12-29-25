@@ -1,4 +1,23 @@
 .page{
+  --bg0:#050f1f;
+  --bg1:#071a33;
+  --card:rgba(10,26,50,.45);
+  --stroke:rgba(135,196,255,.20);
+  --stroke2:rgba(135,196,255,.14);
+  --text:#eaf4ff;
+  --muted:rgba(234,244,255,.72);
+  --accent:#ff2d2d;
+  --accent2:#42b6ff;
+
+  min-height:100vh;
+  color:var(--text);
+  background:
+    radial-gradient(900px 500px at 20% -10%, rgba(66,182,255,.18), transparent 60%),
+    radial-gradient(700px 500px at 110% 20%, rgba(255,45,45,.12), transparent 55%),
+    linear-gradient(180deg,var(--bg0) 0%, var(--bg1) 55%, #06254b 100%);
+  overflow-x:hidden;
+}
+.page{
   min-height:100vh;
   color:#fff;
   background:linear-gradient(180deg,#061a33 0%,#071f3d 35%,#06254b 100%);
