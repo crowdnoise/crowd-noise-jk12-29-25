@@ -183,13 +183,17 @@
   font-size:12px;
 }
 .postBtn{
-  padding:10px 14px;
+  .postBtn{
+  padding:11px 14px;
   border-radius:14px;
-  border:1px solid rgba(255,45,45,.45);
-  background:#ff2d2d;
+  border:1px solid rgba(255,45,45,.55);
+  background:linear-gradient(180deg, #ff4a4a 0%, #ff2d2d 70%);
+  box-shadow:0 14px 30px rgba(255,45,45,.18);
   color:#fff;
   font-weight:900;
   cursor:pointer;
+}
+
 }
 
 /* Feed */
