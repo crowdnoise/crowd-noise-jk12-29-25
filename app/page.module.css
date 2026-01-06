@@ -284,4 +284,10 @@
     min-width:0 !important;
   }
   .right{display:none !important;}
+}@media (max-width: 900px) {
+  .headerInner{ align-items:flex-start; }
+  .title{ font-size:18px; }
+  .headerRight{ gap:8px; }
+  .pill{ padding:9px 11px; font-size:12px; }
 }
+
