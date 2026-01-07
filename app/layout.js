@@ -29,4 +29,12 @@ export default function RootLayout({ children }) {
       </body>
     </html>
   );
-}
+}export const metadata = {
+  title: "Crowd Noise",
+  description: "Where fans get loud",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/icon-180.png"
+  }
+};
+
